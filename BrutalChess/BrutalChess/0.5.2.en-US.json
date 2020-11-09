@@ -1,0 +1,40 @@
+{
+  "id": "6e5d9695-6db0-4466-b587-d7473852854a",
+  "productId": "eb6f2160-f3e9-420e-a0a4-6edf23a25160",
+  "descriptions": [
+    "[\"Brutal Chess features full 3D graphics, an advanced particle engine, and several different levels of intelligent AI, inspired by the once popular  \"Battle Chess\" released by Interplay circa 1988.\",\"Brutal Chess features full 3D graphics, an advanced particle engine, and several different levels of intelligent AI, inspired by the once popular  \"Battle Chess\" released by Interplay circa 1988.\"]"
+  ],
+  "userManualUrls": [
+    ""
+  ],
+  "agreementUrls": [
+    ""
+  ],
+  "privacyPolicyUrls": [
+    ""
+  ],
+  "name": "Brutal Chess",
+  "version": "0.5.2",
+  "versionAlias": "",
+  "revision": "",
+  "arch": "x86",
+  "locale": "en-US",
+  "tags": [
+    "chess",
+    "game",
+    "boardgame",
+    "turnbased"
+  ],
+  "dependencies": [],
+  "url": "https://sourceforge.net/projects/brutalchess/files/brutalchess-alpha/brutalchess-alpha-0.5.2/brutalchess-alpha-0.5.2-win32.exe/download",
+  "internalUrl": "",
+  "imgUrl": "",
+  "uploadDate": "2020-11-06T15:44:00Z",
+  "releaseDate": "",
+  "installArgs": "",
+  "uninstallArgs": "",
+  "upgradeToMajor": true,
+  "fileType": "exe",
+  "multipleMajorVersion": false,
+  "major": "0"
+}
