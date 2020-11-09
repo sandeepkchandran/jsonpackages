@@ -9,7 +9,7 @@ jobs:
     steps:
       - id: set_var
         run: |
-          content=`cat ./path/to/packages.json`
+          content=`jsonpackages ./blob/master/packages.json`
           # the following lines are only required for multi line json
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
