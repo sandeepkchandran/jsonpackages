@@ -1,28 +1,20 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+name: Test linux job
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  push
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  testJob:
+    name: Test
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Read packages.json
-        id: package
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: jsonpackages/blob/master/packages.json
-      - name: Echo packages.json
-        run: echo ${{ steps.packages.outputs.content }}
+      - id: set_var
+        run: |
+          content=`cat ./path/to/packages.json`
+          # the following lines are only required for multi line json
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          # end of optional handling for multi line json
+          echo "::set-output name=packageJson::$content"
+      - run: |
+          echo "${{fromJson(steps.set_var.outputs.packageJson).version}}"
